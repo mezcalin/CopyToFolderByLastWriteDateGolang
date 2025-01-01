@@ -48,7 +48,7 @@ func GetFilesFromDir(srcDir string) Files {
 		file := File{
 			Filename:  entry.Name(),
 			SourceDir: srcDir,
-			TargetDir: filepath.Join(srcDir, fmt.Sprintf("%d-%02d", info.ModTime().Year(), info.ModTime().Month())),
+			TargetDir: filepath.Join(srcDir, fmt.Sprintf("%d_%02d_%02d", info.ModTime().Year(), info.ModTime().Month(), info.ModTime().Day())),
 		}
 		files = append(files, file)
 	}
