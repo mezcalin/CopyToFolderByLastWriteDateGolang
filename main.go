@@ -1,3 +1,5 @@
+// main.go
+
 /*
 This program is a simple file manager that allows you to get files from a directory and copy them to another directory.
 During this process, it will create subdirectories in the target directory based on the creation date of the files.
