@@ -9,6 +9,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"example.xom/go-demo-1/fileManager"
 )
@@ -32,11 +33,11 @@ func main() {
 	files.ListFiles()
 
 	//Frage ob die Dateien verschoben werden sollen
-	var moveFiles bool
+	var moveFiles string
 	fmt.Print("Möchten Sie die Dateien verschieben? (j/n): ")
 	fmt.Scanln(&moveFiles)
 
-	if moveFiles {
+	if strings.ToLower(moveFiles) == "j" {
 		// Move files to the target directory
 		files.MoveFilesToDir()
 		fmt.Println("\nAlle Dateien wurden erfolgreich verschoben.")
